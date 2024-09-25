@@ -1,0 +1,72 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    position: relative;
+    height: 100vh;
+    margin-top: 15vh;
+}
+
+.first-card,
+.second-card,
+.third-card {
+    width: 300px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.first-card {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 1;
+    position: relative;
+
+}
+
+.second-card,
+.third-card {
+    position: absolute;
+
+
+}
+
+.second-card {
+
+    left: 20vh;
+    top: 30vh
+}
+
+.third-card {
+    right: 20vh;
+    top: 30vh
+}
+
+@media(max-width:1100px) {
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.first-card,
+.second-card,
+.third-card {
+    position: relative;
+    width: 90%;
+    height: auto;
+    top: 0;
+}
+
+.second-card,
+.third-card{
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+    
+}

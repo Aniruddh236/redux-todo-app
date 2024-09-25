@@ -1,0 +1,15 @@
+.newItem-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inputField{
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+.addButton {
+    white-space: nowrap; /* Prevents the button text from wrapping */
+  }
