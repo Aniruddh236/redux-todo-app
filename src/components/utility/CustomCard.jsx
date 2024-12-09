@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect , memo} from "react";
 import { Box, Card, CardContent, CircularProgress, Typography } from '@mui/material';
 
-export default function CustomCard({ cardName = "default card", tasks = [] }) {
+function CustomCard({ cardName = "default card", tasks = [] }) {
+
+    useEffect(()=>{
+console.log("Custom card render");
+
+    },[cardName,tasks])
+
+
     return <>
         <Card sx={{ maxWidth: 500, margin: 'auto', mt: 2 }}>
             <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -44,3 +51,8 @@ export default function CustomCard({ cardName = "default card", tasks = [] }) {
         </Card>
     </>
 }
+
+
+const MemoizedCustomCard = memo(CustomCard);
+
+export default MemoizedCustomCard;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ToDoItem from "./TodoItem";
 import { useSelector } from 'react-redux'
 
@@ -6,7 +6,10 @@ import "../styles/ToDoList.css"
 
 function TodoList() {
     const tasks = useSelector((state) => state.tasks.tasks)
-
+    useEffect(()=>{
+        console.log("Todo List rendered");
+        
+    },[])
 
     return <>
         <div>

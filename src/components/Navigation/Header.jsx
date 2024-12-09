@@ -1,9 +1,15 @@
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 
 export default function Header(){
+
+  useEffect(()=>{
+
+    console.log("header render")
+
+  },[])
 
     return(
     <AppBar position="sticky">
